@@ -1,0 +1,273 @@
+
+/* =========================
+   LAYOUT UTAMA
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f5fa;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: #ffffff;
+  border-right: 1px solid #e9e8ef;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 12px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 5px 28px;
+  color: #263c42;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #d9f1ef;
+  color: #168f8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse-icon {
+  margin-left: auto;
+  color: #9ca3af;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #68747a;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  background: #f0f7f6;
+  color: #138c89;
+}
+
+.menu-link.active {
+  background: #eaf2f2;
+  color: #167f7d;
+  font-weight: 600;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-button {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e98270;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.logout-button:hover {
+  background: #d96d5c;
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 58px;
+  background: #ffffff;
+  border-bottom: 1px solid #e9e8ef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+}
+
+.topbar h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #52666b;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #67777b;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: #e96e70;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  color: #7d9997;
+  display: flex;
+}
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+.page-content {
+  padding: 22px;
+}
+
+.page-placeholder {
+  background: white;
+  border: 1px solid #eeedf2;
+  border-radius: 8px;
+  padding: 22px;
+  min-height: 180px;
+  color: #53666b;
+}
+
+.page-placeholder h2 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.page-placeholder p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f5fa;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  padding: 32px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  color: #168f8b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-card h2 {
+  color: #354d52;
+  font-size: 20px;
+}
+
+.login-card p {
+  color: #899396;
+  font-size: 13px;
+}
+
+.login-card input {
+  padding: 12px;
+  border: 1px solid #dedfe5;
+  border-radius: 6px;
+  outline-color: #168f8b;
+}
+
+.login-card button {
+  padding: 12px;
+  background: #168f8b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 165px;
+    min-width: 165px;
+    padding: 14px 8px;
+  }
+
+  .sidebar-logo {
+    font-size: 13px;
+  }
+
+  .topbar {
+    padding: 0 12px;
+  }
+
+  .topbar h2 {
+    font-size: 13px;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+}
