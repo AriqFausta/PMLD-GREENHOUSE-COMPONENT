@@ -1,0 +1,334 @@
+
+/* ==============================
+   THRESHOLD GREENHOUSE
+================================ */
+
+.threshold-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.threshold-heading h2 {
+  margin: 0 0 7px;
+  color: #344b59;
+  font-size: 23px;
+}
+
+.threshold-heading p {
+  margin: 0;
+  color: #7b8991;
+  font-size: 14px;
+}
+
+/* INFORMASI */
+
+.threshold-information {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 16px;
+  border: 1px solid #dcece8;
+  border-radius: 9px;
+  background: #f0f8f5;
+  color: #399a8c;
+}
+
+.threshold-information svg {
+  flex-shrink: 0;
+}
+
+.threshold-information p {
+  margin: 0;
+  color: #647e78;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* KARTU PENGATURAN */
+
+.threshold-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.threshold-card {
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #ececf1;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(40, 50, 70, 0.025);
+}
+
+.threshold-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 23px;
+}
+
+.threshold-card-heading h3 {
+  margin: 0;
+  color: #405563;
+  font-size: 15px;
+}
+
+.threshold-card-heading p {
+  margin: 5px 0 0;
+  color: #9aa4aa;
+  font-size: 11px;
+}
+
+.threshold-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.threshold-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.threshold-form-group label {
+  color: #71808a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.threshold-form-group input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #e5e8ec;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #405563;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.threshold-form-group input:focus {
+  border-color: #49a99b;
+  box-shadow: 0 0 0 3px rgba(73, 169, 155, 0.08);
+}
+
+/* TOMBOL AKSI */
+
+.threshold-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 11px;
+  padding: 17px 0;
+  border-top: 1px solid #e9e9ef;
+}
+
+.threshold-unsaved {
+  margin-right: auto;
+  align-self: center;
+  color: #d49a35;
+  font-size: 11px;
+}
+
+.threshold-reset-button,
+.threshold-save-button,
+.threshold-cancel-button,
+.threshold-confirm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 0 16px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.threshold-reset-button {
+  border: 1px solid #e3e7eb;
+  background: #ffffff;
+  color: #71808a;
+}
+
+.threshold-reset-button:hover:not(:disabled) {
+  background: #f6f7f8;
+}
+
+.threshold-save-button,
+.threshold-confirm-button {
+  border: 1px solid #399a8c;
+  background: #399a8c;
+  color: #ffffff;
+}
+
+.threshold-save-button:hover:not(:disabled),
+.threshold-confirm-button:hover {
+  background: #2e887b;
+}
+
+.threshold-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* MODAL */
+
+.threshold-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(32, 43, 51, 0.4);
+}
+
+.threshold-modal {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  padding: 30px 25px 25px;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  animation: thresholdModalAppear 0.2s ease;
+}
+
+@keyframes thresholdModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.threshold-modal-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #9aa4aa;
+  cursor: pointer;
+}
+
+.threshold-modal-close:hover {
+  background: #f3f4f6;
+}
+
+.threshold-modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+}
+
+.threshold-modal-icon.warning {
+  background: #fff5df;
+  color: #d6a537;
+}
+
+.threshold-modal-icon.success {
+  background: #e6f5ed;
+  color: #32966e;
+}
+
+.threshold-modal-icon.error {
+  background: #fff0ed;
+  color: #df7869;
+}
+
+.threshold-modal h3 {
+  margin: 0 0 9px;
+  color: #405563;
+  font-size: 18px;
+}
+
+.threshold-modal > p {
+  margin: 0;
+  color: #89979f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.threshold-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.threshold-cancel-button {
+  border: 1px solid #e3e7eb;
+  background: #ffffff;
+  color: #71808a;
+}
+
+.threshold-cancel-button:hover {
+  background: #f6f7f8;
+}
+
+.threshold-confirm-button.full {
+  width: 100%;
+  margin-top: 22px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .threshold-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .threshold-heading h2 {
+    font-size: 19px;
+  }
+
+  .threshold-card {
+    padding: 16px;
+  }
+
+  .threshold-input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threshold-actions {
+    flex-wrap: wrap;
+  }
+
+  .threshold-actions button {
+    flex: 1;
+  }
+
+  .threshold-unsaved {
+    flex-basis: 100%;
+  }
+}

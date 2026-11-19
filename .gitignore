@@ -1,0 +1,10 @@
+vendor/
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+
+*.log
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
